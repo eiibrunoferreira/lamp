@@ -3,39 +3,39 @@ const lamp = document.getElementById ('lamp');
 const textBroken = document.getElementById ('textBroken');
 
 
-function lampOnOff () {
+function lampOnOff() {
     if ( turnOnOff.textContent == 'LIGAR') {
-        lampOn ();
+        lampOn();
         turnOnOff.textContent = 'DESLIGAR';
     } else {
-        lampOff ();
+        lampOff();
         turnOnOff.textContent = 'LIGAR';
     }
 }
 
 function lampOn() {
-    if (!isLampBroken ()) {
+    if (!isLampBrokenn()) {
         lamp.src = './imgs/ligada.jpg';
     }
 }
 
 function lampOff() {
-    if (!isLampBroken ()) {
+    if (!isLampBrokenn()) {
         lamp.src = './imgs/desligada.jpg';
     }
 }
 
 function lampBroken() {
     lamp.src = './imgs/quebrada.jpg';
-    activeTextBroken ();
+    activeTextBroken();
     turnOnOff.style.display = 'none';
 }
 
-function isLampBroken () {
+function isLampBrokenn() {
     return lamp.src.indexOf ('quebrada') > -1;
 }
 
-function activeTextBroken () {
+function activeTextBroken() {
     textBroken.style.display = 'flex';
 }
 
