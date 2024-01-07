@@ -15,18 +15,18 @@ function lampOnOff () {
 
 function lampOn() {
     if (!isLampBroken ()) {
-        lamp.src = "./imgs/ligada.jpg";
+        lamp.src = './imgs/ligada.jpg';
     }
 }
 
 function lampOff() {
-    if (!isLampBroken ()) {s
-        lamp.src = "./imgs/desligada.jpg";
+    if (!isLampBroken ()) {
+        lamp.src = './imgs/desligada.jpg';
     }
 }
 
 function lampBroken() {
-    lamp.src = "./imgs/quebrada.jpg";
+    lamp.src = './imgs/quebrada.jpg';
     activeTextBroken ();
     turnOnOff.style.display = 'none';
 }
